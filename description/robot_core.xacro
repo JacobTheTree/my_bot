@@ -1,6 +1,8 @@
 <?xml version="1.0"?>   
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
     <xacro:include filename="inertial_macros.xacro"/>
+
     <link name="base_link">
     </link>
     <joint name="chassis_joint" type="fixed">
@@ -70,7 +72,7 @@
 
     <!-- RIGHT WHEEL  -->
 
-    <joint name="right_wheel_join" type="continuous">
+    <joint name="right_wheel_joint" type="continuous">
         <parent link="chassis"/>
         <child link="right_wheel"/>
         <origin xyz="0.0 -0.175 0.0" rpy="${pi/2} 0.0 0.0"/>
