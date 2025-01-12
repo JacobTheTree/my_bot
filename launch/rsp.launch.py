@@ -32,6 +32,19 @@ def generate_launch_description():
 
     # Launch!
     return LaunchDescription([
+
+        Node(
+            package="rviz2",
+            executable="rviz2",
+            name="rviz2",
+            output="screen",
+        ),
+        Node(
+            package="joint_state_publisher_gui",
+            executable="joint_state_publisher_gui",
+            name="joint_state_publisher_gui",
+            output="screen",
+        ),
         DeclareLaunchArgument(
             'use_sim_time',
             default_value='false',
